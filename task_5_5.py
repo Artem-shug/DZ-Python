@@ -1,0 +1,26 @@
+
+
+src = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+
+
+###############################################
+result = [i for i in src if src.count(i) == 1]
+
+print(result)
+
+################################################
+
+new_src = set()
+tmp = set()
+
+for i in src:
+    if i not in tmp:
+       new_src.add(i)
+    else:
+        new_src.discard(i) 
+    tmp.add(i)
+
+new_src_1 = [i for i in src if i in new_src]
+
+print(new_src_1)
+
